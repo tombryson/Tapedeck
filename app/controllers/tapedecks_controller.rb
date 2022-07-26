@@ -5,15 +5,30 @@ class TapedecksController < ApplicationController
     @tapedecks = @current_user.tapedecks
   end
 
+  def show
+    @tapedeck = Tapedeck.find params[:id]
+  end
+
   def new
     @tapedeck = Tapedeck.new
   end
 
+  def edit
+    @tapedeck = Tapedeck.find params[:id]
+  end
+  
   def create
     tapedeck = Tapedeck.create tapedeck_params
     @current_user.tapedecks << tapedeck
-    redirect_to tapedeck_path
+    redirect_to tapedeck
   end
+  
+  def destroy
+    tapedeck = Tapedeck.find params[:id]
+    tapedeck.destroy
+    redirect_to tapedecks_path
+  end
+
 
   private
   def tapedeck_params

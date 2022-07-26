@@ -1,0 +1,12 @@
+<h1><%= @tapedeck.name.titleize %></h1>
+
+<ul>
+    <li>Tapedeck Name: <%= @tapedeck.name.titleize %></li>
+</ul>
+
+
+<div class="controls">
+    <%= link_to 'Edit Name', edit_tapedeck_path(@tapedeck) %>
+    <%= link_to 'Delete Tapedeck', @tapedeck, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+    <%= link_to 'Add Albums', albums_new_path %>
+</div>

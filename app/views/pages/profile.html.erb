@@ -1,2 +1,12 @@
-<h1>Your Profile</h1>
-<h4>User:<%= @current_user.email %></h4>
+<div>
+    <div class='main'>
+       <h1>Your Profile</h1>
+         <h4>User: <%= @current_user.email %></h4>
+
+    </div>
+        <aside>
+<%= link_to "My Tapedecks", tapedecks_path %>
+        </aside>
+
+
+</div>

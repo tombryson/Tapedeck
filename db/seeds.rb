@@ -1,6 +1,6 @@
 User.destroy_all
-u1 = User.create :email => 'jonesy@ga.co', :password => 'chicken'
-u2 = User.create :email => 'craigsy@ga.co', :password => 'chicken', :admin => true
+u1 = User.create :email => 'jonesy@ga.co', :username => 'jonesy', :password => 'chicken'
+u2 = User.create :email => 'craigsy@ga.co', :username => 'craigsy', :password => 'chicken', :admin => true
 puts "#{ User.count } users"
 
 Song.destroy_all
@@ -11,8 +11,8 @@ s4 = Song.create :title => 'Against the Sky'
 puts "#{ Song.count } songs"
 
 Album.destroy_all
-l1 = Album.create :title => 'Hunting High and Low'
-l2 = Album.create :title => 'Chopin III'
+l1 = Album.create :title => 'Hunting High and Low', :released => '1985-06-01'
+l2 = Album.create :title => 'Chopin III', :released => '1993-04-06'
 l3 = Album.create :title => 'More Songs About Food And Revolutionary Art'
 l4 = Album.create :title => 'The Pearl'
 puts "#{ Album.count } albums"
@@ -32,10 +32,10 @@ g4 = Genre.create :name => 'Ambient'
 puts "#{ Genre.count } genres"
 
 Tapedeck.destroy_all
-t1 = Tapedeck.create :name => "80's Pop"
-t2 = Tapedeck.create :name => "Classical Drive"
-t3 = Tapedeck.create :name => "Best of Detroit Techno"
-t4 = Tapedeck.create :name => 'My Favourite Ambient Albums'
+t1 = Tapedeck.create :name => "80's Pop", :user_id => 6 
+t2 = Tapedeck.create :name => "Classical Drive", :user_id => 6 
+t3 = Tapedeck.create :name => "Best of Detroit Techno", :user_id => 7
+t4 = Tapedeck.create :name => 'My Favourite Ambient Albums', :user_id => 7
 puts "#{ Tapedeck.count } tapedecks"
 
 # Associations ######################################################

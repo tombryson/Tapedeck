@@ -2,10 +2,13 @@
 
 
 
-<p><%=if @current_user.present? then "Welcome #{@current_user.email}!" end %></p>
+<p><%=if @current_user.present? then "Welcome #{@current_user.username.capitalize}!" end %></p>
+
+<p>Most recent community tapedecks!</p>
 
 <% @tapedecks.each do |tapedeck| %>
     <ul>
-        <li>Tapedeck Name: <%= link_to tapedeck.name, tapedeck %></li>
+        <li> User <%= link_to tapedeck.user.username, tapedeck %> created the tapedeck: <%= link_to tapedeck.name.titleize, tapedeck %></li>
     </ul>
+
 <% end %>
