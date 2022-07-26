@@ -1,0 +1,11 @@
+<h1>Welcome to Tapedeck</h1>
+
+
+
+<p><%=if @current_user.present? then "Welcome #{@current_user.email}!" end %></p>
+
+<% @tapedecks.each do |tapedeck| %>
+    <ul>
+        <li>Tapedeck Name: <%= link_to tapedeck.name, tapedeck %></li>
+    </ul>
+<% end %>

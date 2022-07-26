@@ -1,0 +1,7 @@
+<h1>My Tapedecks</h2>
+
+<% @tapedecks.each do |tapedeck| %>
+    <ul>
+        <li>Tapedeck Name: <%= link_to tapedeck.name, tapedeck %></li>
+    </ul>
+<% end %>

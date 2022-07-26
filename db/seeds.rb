@@ -1,6 +1,6 @@
 User.destroy_all
 u1 = User.create :email => 'jonesy@ga.co', :password => 'chicken'
-u2 = User.create :email => 'craigsy@ga.co', :password => 'chicken'
+u2 = User.create :email => 'craigsy@ga.co', :password => 'chicken', :admin => true
 puts "#{ User.count } users"
 
 Song.destroy_all
@@ -64,8 +64,5 @@ t3.albums << l3
 t4.albums << l4
 
 puts "Tapedecks and users"
-binding.pry
 u1.tapedecks << t1 << t2
 u2.tapedecks << t3 << t4
-
-

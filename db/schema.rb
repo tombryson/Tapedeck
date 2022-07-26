@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_25_030748) do
+ActiveRecord::Schema.define(version: 2022_07_25_140611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2022_07_25_030748) do
     t.integer "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "albums_tapedecks", id: false, force: :cascade do |t|
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 2022_07_25_030748) do
     t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "album_id"
   end
 
   create_table "tapedecks", force: :cascade do |t|
@@ -55,16 +57,12 @@ ActiveRecord::Schema.define(version: 2022_07_25_030748) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tapedecks_albums", force: :cascade do |t|
-    t.integer "tapedeck_id"
-    t.integer "album_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.text "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+    t.boolean "admin", default: false
   end
 
 end

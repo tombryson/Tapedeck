@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Tapedeck</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
   </head>
 
   <body>
+
+    <nav>
+      <%= link_to 'Home', root_path %>
+      <% if @current_user.present? %>
+        <%= link_to "All users", users_path if @current_user.admin? %>
+        <%= link_to "Create Tapedeck", new_tapedeck_path %>
+        <%= link_to "Logout", login_path, :method => 'delete' %>
+        <%= link_to "Profile", profile_path %>
+      <% else %>
+        <%= link_to 'Sign up', new_user_path %>
+        <%= link_to 'Sign in', login_path %>
+      <% end %>
+    </nav>
+
+    
+
     <%= yield %>
   </body>
 </html>
