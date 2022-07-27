@@ -1,0 +1,9 @@
+<h1>Edit Name</h1>
+
+<%= form_for @tapedeck do |f| %>
+    <%= f.label :name, "Tapedeck Name" %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>
+<br>
+<%= link_to 'Back', tapedeck_path %>

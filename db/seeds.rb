@@ -13,8 +13,8 @@ puts "#{ Song.count } songs"
 Album.destroy_all
 l1 = Album.create :title => 'Hunting High and Low', :released => '1985-06-01'
 l2 = Album.create :title => 'Chopin III', :released => '1993-04-06'
-l3 = Album.create :title => 'More Songs About Food And Revolutionary Art'
-l4 = Album.create :title => 'The Pearl'
+l3 = Album.create :title => 'More Songs About Food And Revolutionary Art', :released => '1997-03-24'
+l4 = Album.create :title => 'The Pearl', :released => '1984-08-06'
 puts "#{ Album.count } albums"
 
 Artist.destroy_all

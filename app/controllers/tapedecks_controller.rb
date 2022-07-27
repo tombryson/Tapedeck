@@ -29,6 +29,11 @@ class TapedecksController < ApplicationController
     redirect_to tapedecks_path
   end
 
+  def update
+  tapedeck = Tapedeck.find params[:id]
+  tapedeck.update tapedeck_params
+  redirect_to tapedeck
+  end
 
   private
   def tapedeck_params
