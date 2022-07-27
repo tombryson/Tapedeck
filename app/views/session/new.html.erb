@@ -1,5 +1,5 @@
+<div class=sign-up>
 <h1>Sign in</h1>
-
 <%= form_tag login_path do %>
     <div class="form-group">
         <%= label_tag :username %>
@@ -16,5 +16,6 @@
         <%= password_field_tag :password, nil, :class => 'form-control' %>
     </div>
 
-    <%= submit_tag "Sign in", :class => 'btn btn-info' %>
+    <%= submit_tag "Sign in", :class => 'btn btn-outline-success' %>
 <% end %>
+</div>

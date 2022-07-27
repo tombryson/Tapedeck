@@ -6,12 +6,15 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
 <div class="container">
+
 <nav class="navbar navbar-dark bg-dark">
     <nav>
+    <%= image_tag 'logo3_white.png', :class => 'home-nav' %>
       <%= link_to 'Home', root_path %>
       <% if @current_user.present? %>
         <%= link_to "All users", users_path if @current_user.admin? %>
@@ -23,6 +26,7 @@
         <%= link_to 'Sign in', login_path %>
       <% end %>
     </nav>
+     <p class='login'><%=if @current_user.present? then "Username:  #{ @current_user.username.capitalize}" end %></p>
     </nav>
 
     <%= yield %>

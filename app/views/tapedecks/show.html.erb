@@ -9,5 +9,7 @@
     <%= link_to 'Edit Name', edit_tapedeck_path(@tapedeck) %>
     <%= link_to 'Delete Tapedeck', @tapedeck, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
     <%= link_to 'Add Albums', new_album_path %>
+    <% else %>
+    <p> Tapedeck created by: <%= @tapedeck.username %></p>
     <% end %>
 </div>

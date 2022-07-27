@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+
+
+body {
+    background: #00ff02;
+}
+
+.banner {
+    max-height: 30em;
+}
+
+.sign-up {
+    margin: 0 auto;
+}
+
+.login {
+    font-family: 'Saira', sans-serif;
+    color: white;
+    padding: 20px;
+    margin: 0 auto;
+    margin-right: 42px;
+    margin-bottom: 1px;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.row-updates {
+    margin-top: 150px;
+}
+
+.col-md-14 {
+    margin-left: 10px;
+}
+
+.col-md-19 {
+    margin-left: 24px;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+.home-nav {
+    max-height: 5.5em;
+}
+
+.navbar a {
+    transition: color 2.5s;
+}
+
+.navbar a:hover{
+    transition: 0.25s;
+    filter: invert(63%) sepia(89%) saturate(0%) hue-rotate(82deg) brightness(1000%) contrast(124%);
+  }
+
+.navbar {
+    margin-top: 0px;
+    border: solid black 2.5px;
+    border-radius: 10px;
+}
+
+.navbar a{
+    color: #00ff01;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.col-md-6 {
+    display: inline-block;
+}
+
+li a {
+    color: rgb(241, 241, 241);
+    font-style: italic;
+}
+
+li a:hover {
+    color: black;
+    text-decoration: none;
+}

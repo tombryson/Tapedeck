@@ -32,10 +32,10 @@ g4 = Genre.create :name => 'Ambient'
 puts "#{ Genre.count } genres"
 
 Tapedeck.destroy_all
-t1 = Tapedeck.create :name => "80's Pop", :user_id => 6 
-t2 = Tapedeck.create :name => "Classical Drive", :user_id => 6 
-t3 = Tapedeck.create :name => "Best of Detroit Techno", :user_id => 7
-t4 = Tapedeck.create :name => 'My Favourite Ambient Albums', :user_id => 7
+t1 = Tapedeck.create :name => "80's Pop", :username => 'jonesy'
+t2 = Tapedeck.create :name => "Classical Drive", :username => 'jonesy'
+t3 = Tapedeck.create :name => "Best of Detroit Techno", :username => 'craigsy'
+t4 = Tapedeck.create :name => 'My Favourite Ambient Albums', :username => 'craigsy'
 puts "#{ Tapedeck.count } tapedecks"
 
 # Associations ######################################################
