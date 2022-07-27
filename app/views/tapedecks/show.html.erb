@@ -1,15 +1,14 @@
-<h1><%= @tapedeck.name.titleize %></h1>
+<div class="row-view">
+ <div class="col-md-10">
+    <h2>Tapedeck:</h2><h1><%= @tapedeck.name.titleize %></h1>
 
-<ul>
-    <li>Tapedeck Name: <%= @tapedeck.name %></li>
-</ul>
-
- <% if @current_user.id == @tapedeck.user_id  %>
-<div class="controls">
-    <%= link_to 'Edit Name', edit_tapedeck_path(@tapedeck) %>
-    <%= link_to 'Delete Tapedeck', @tapedeck, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
-    <%= link_to 'Add Albums', new_album_path %>
-    <% else %>
-    <p> Tapedeck created by: <%= @tapedeck.username %></p>
-    <% end %>
+    <% if @current_user.id == @tapedeck.user_id  %>
+    <div class="controls">
+        <%= link_to 'Edit Name', edit_tapedeck_path(@tapedeck) %>
+        <%= link_to 'Delete Tapedeck', @tapedeck, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+        <%= link_to 'Add Albums', new_album_path %>
+        <% else %>
+        <p> Tapedeck created by: <span class='username'><%= @tapedeck.username.titleize %></span></p>
+        <% end %>
+    </div>
 </div>

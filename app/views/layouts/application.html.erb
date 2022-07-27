@@ -15,6 +15,7 @@
 <nav class="navbar navbar-dark bg-dark">
     <nav>
     <%= image_tag 'logo3_white.png', :class => 'home-nav' %>
+    <%= image_tag 'logo3_purp.png', :class => 'image-container'  %>
       <%= link_to 'Home', root_path %>
       <% if @current_user.present? %>
         <%= link_to "All users", users_path if @current_user.admin? %>

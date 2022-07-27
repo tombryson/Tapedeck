@@ -1,7 +1,14 @@
-<h1>My Tapedecks</h2>
+
+<div class="row-view">
+ <div class="col-md-10">
+
+<h2>My Tapedecks</h2><br>
 
 <% @tapedecks.each do |tapedeck| %>
     <ul>
         <li>Tapedeck Name: <%= link_to tapedeck.name, tapedeck %></li>
     </ul>
 <% end %>
+
+</div>
+</div>

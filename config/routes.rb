@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about/show'
   root :to => 'pages#home'
   resources :users, :only => [:new, :create]
   resources :users, :only => [:new, :create, :index]

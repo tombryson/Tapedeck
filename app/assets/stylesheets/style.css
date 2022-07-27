@@ -5,29 +5,48 @@ body {
     background: #00ff02;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .banner {
     max-height: 30em;
 }
 
 .sign-up {
-    margin: 0 auto;
+    margin: 8.5%;
+}
+
+.controls {
+    padding: 6px;
 }
 
 .login {
     font-family: 'Saira', sans-serif;
     color: white;
     padding: 20px;
+    font-size: large;
     margin: 0 auto;
-    margin-right: 42px;
+    margin-right: 65px;
     margin-bottom: 1px;
+}
+
+.username {
+    color: rgb(255 14 224);
 }
 
 .form-control {
     width: 50%;
 }
 
+.row-view {
+    text-align: left;
+    margin: 40px 20px 20px 60px;
+}
+
 .row-updates {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .col-md-14 {
@@ -42,8 +61,8 @@ h1 {
     font-size: 52px;
 }
 
-.home-nav {
-    max-height: 5.5em;
+h5 {
+    font-size: 1.44rem;
 }
 
 .navbar a {
@@ -61,9 +80,9 @@ h1 {
     border-radius: 10px;
 }
 
-.navbar a{
+.navbar a, aside a{
     color: #00ff01;
-    padding: 10px;
+    padding: 20px;
     text-decoration: none;
 }
 
@@ -72,11 +91,66 @@ h1 {
 }
 
 li a {
-    color: rgb(241, 241, 241);
-    font-style: italic;
+    color: #b90ba2
 }
 
 li a:hover {
     color: black;
     text-decoration: none;
+}
+
+aside {
+    border: solid black;
+    /* max-height: 500px; */
+    min-height: 600px;
+    width: 200px;
+    border-radius: 12px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: #333a40;
+}
+
+aside a {
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.container-profile {
+    display: flex;
+}
+
+.profile {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+.home-nav {
+    max-height: 5.600000000000001em;
+    margin: -8px;
+    top: 18px;
+    /* image-orientation: unset; */
+    zoom: 115%;
+}
+
+.image-container {
+    position: absolute;
+    margin: -10px;
+    max-height: 6.6em;
+    opacity: 0;
+    left: 16px;
+    transition: 0.16s;
+    transition-property: inherit;
+    transition-duration: 0.14s;
+    transition-timing-function: cubic-bezier(0.1, 0.34, 0.89, 0.71);
+    /* transition-delay: 0.0s; */
+    background: radial-gradient(rgb(51 58 64) 68%, transparent 102%);
+}
+
+.image-container:hover {
+    transition: opacity 0.3s all;
+    opacity: 1;
 }
