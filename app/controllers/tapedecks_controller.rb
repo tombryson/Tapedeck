@@ -13,6 +13,15 @@ class TapedecksController < ApplicationController
     @tapedeck = Tapedeck.new
   end
 
+  def add_album_page
+    @tapedeck = Tapedeck.find params[:id]
+    @albums = Album.all
+  end
+
+  def add_album
+  end
+  
+
   def edit
     @tapedeck = Tapedeck.find params[:id]
   end

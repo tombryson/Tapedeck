@@ -5,13 +5,26 @@
 }
 
 body {
-    background: rgb(250, 250, 250);
+    background-color: #0e0f11;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .container {
     background: #00ff02;
-    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px, rgb(0 0 0 / 34%) 1px 1px 2px;
-    min-height: 800px;
+    min-height: 960px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 100.66px;
+}
+
+.album-img {
+    max-width: 600px;
+    width: 100%;
+    border: solid black;
+    border-radius: 4px;
 }
 
 a {
@@ -20,7 +33,14 @@ a {
 }
 
 .banner {
-    max-height: 30em;
+    max-height: 16em;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    font-family: 'Saira', sans-serif;
 }
 
 .sign-up {
@@ -64,20 +84,14 @@ a {
     margin: 40px 20px 20px 60px;
 }
 
-.row-updates {
-    margin-top: 100px;
-}
-
-.col-md-14 {
-    margin-left: 10px;
-}
-
-.col-md-19 {
-    margin-left: 24px;
+p {
+    color: #0e0f11;
 }
 
 h1 {
     font-size: 52px;
+    color: #0e0f11;
+    padding-bottom: 30px;
 }
 
 h5 {
@@ -95,10 +109,11 @@ h5 {
 
 .navbar {
     margin-top: 0px;
-    border: solid black 2.5px;
-    border-radius: 10px;
-    width: 100%;
     align-items: baseline;
+    box-shadow: 0px 4px 4px 0px black;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .navbar a, aside a{
@@ -112,7 +127,8 @@ h5 {
 }
 
 li a {
-    color: #b90ba2
+    color: #b90ba2;
+    font-style: italic;
 }
 
 li a:hover {
@@ -121,15 +137,21 @@ li a:hover {
 }
 
 aside {
-    border: solid black;
-    /* max-height: 500px; */
-    min-height: 600px;
+    min-height: 960px;
     width: 200px;
-    border-radius: 12px;
     display: block;
     padding: 20px;
     padding-top: 30px;
     background-color: #333a40;
+    height: 100%;
+}
+
+.panel {
+    background: #fafafa;
+    padding: 30px;
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: 6px 9px 6px 0px #0e0f11;
 }
 
 aside a {
@@ -144,7 +166,6 @@ aside a {
 
 .profile {
     display: inline-block;
-    margin: 0 auto;
     padding: 40px;
 }
 
@@ -153,7 +174,6 @@ aside a {
     max-height: 5.600000000000001em;
     margin: -8px;
     top: 18px;
-    /* image-orientation: unset; */
     zoom: 115%;
 }
 
@@ -166,12 +186,15 @@ aside a {
     transition: 0.16s;
     transition-property: inherit;
     transition-duration: 0.14s;
-    transition-timing-function: cubic-bezier(0, 0, 0.67, 0.41);
-    /* transition-delay: 0.0s; */
+    transition-timing-function: cubic-bezier(0.19, 0.57, 0.55, 0.41);
     background: radial-gradient(rgb(51 58 64) 68%, transparent 102%);
 }
 
 .image-container:hover {
     transition: opacity 0.3s all;
     opacity: 1;
+}
+
+.pad-40 {
+    padding: 40px;
 }

@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
   get '/profile' => 'pages#profile'
   get '/tapedeck' => 'tapedecks#index'
+  get '/tapedeck/:id/add_album_page' => 'tapedecks#add_album_page', as: :tapedeck_add_album_page
   get '/albums' => 'albums#index'
   get '/albums/:id/' => 'albums#new'
-  
+  get '/albums/:id/edit' => 'albums#edit'
+
+
 end

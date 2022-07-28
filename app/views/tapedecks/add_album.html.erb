@@ -2,10 +2,11 @@
     <div class="col-md-6">
 
         <h1>Albums Selector</h1>
+        <h3>Select an album to add to your Tapedeck</h3>
         <br>
             <% @albums.each do |album| %>
                 <ul>
-                <%= link_to(album.title, album) %> <%= %>
+                <%= link_to(album.title, album) %>
                 </ul>
             <% end %>
     </div>
