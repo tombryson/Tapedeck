@@ -1,11 +1,17 @@
+<div class="row-view">
+    <div class="col-md-10">
+
 <h1>New Album</h1>
 
 <%= form_for @album do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title, :required => true %>
+    <%= f.label :title, "Name" %>
+    <%= f.text_field :title, :class => 'form-control', :required => true %>
     <%= f.label :released %>
-    <%= f.text_field :released %>
+    <%= f.text_field :released, :class => 'form-control' %>
     <%= f.label :image %>
-    <%= f.url_field :image %>
-    <%= f.submit %>
+    <%= f.url_field :image, :class => 'form-control' %> <br>
+    <%= f.submit "Create Album", :class => 'btn btn-dark'%>
 <% end %>
+
+    </div>
+</div>

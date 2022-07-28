@@ -9,8 +9,7 @@ class AlbumsController < ApplicationController
 
   def create
     album = Album.create album_params
-    @current_user.albums << album
-    redirect_to album_path
+    redirect_to album
   end
 
   def edit
@@ -24,4 +23,10 @@ class AlbumsController < ApplicationController
 
   def destroy
   end
+
+  private
+  def album_params
+    params.require(:album).permit(:title, :image, :released, :album)
+  end
+
 end

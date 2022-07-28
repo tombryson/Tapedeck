@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/tapedeck' => 'tapedecks#index'
   get '/albums' => 'albums#index'
   get '/albums/:id/' => 'albums#new'
+  
 end

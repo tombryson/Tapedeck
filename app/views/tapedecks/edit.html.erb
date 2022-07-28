@@ -1,9 +1,13 @@
+<div class=sign-up>
+    <div class="col-md-12">
+
 <h1>Edit Name</h1>
 
 <%= form_for @tapedeck do |f| %>
     <%= f.label :name, "Tapedeck Name" %>
-    <%= f.text_field :name %>
-    <%= f.submit %>
+    <%= f.text_field :name, :class => 'form-control' %> <br>
+    <%= f.submit "Update", :class => 'btn btn-dark' %>
 <% end %>
 <br>
-<%= link_to 'Back', tapedeck_path %>
+<span class="btn btn-dark"><span id="dark-button">
+<%= link_to 'Back', tapedeck_path %></span></span>

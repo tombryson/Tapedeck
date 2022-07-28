@@ -1,6 +1,9 @@
+<div class=sign-up>
+    <div class="col-md-6">
+
 <h1>All users</h1>
 
-<h2><%= @users.count %> users</h2>
+<h3><%= @users.count %> total users </h3><br>
 
 <% @users.each do |user| %>
     <p><%= user.email %></p>
