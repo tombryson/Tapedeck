@@ -1,13 +1,13 @@
 <div class="row-view">
- <div class="col-md-10">
-<h2>Create a new Tapedeck</h2><br>
+    <div class="col-md-10">
+        <h2>Create a new Tapedeck</h2><br>
 
-    <div class="form-group">
-<%= form_for @tapedeck do |f| %>
-    <%= f.label :name, "Tapedeck Name" %>
-    <%= f.text_field :name, :class => 'form-control' %> <br>
-    <%= f.submit "Create Tapedeck", :class => 'btn btn-dark' %>
+        <div class="form-group">
+        <%= form_for @tapedeck do |f| %>
+        <%= f.label :name, "Tapedeck Name" %>
+        <%= f.text_field :name, :class => 'form-control' %> <br>
+        <%= f.submit "Create Tapedeck", :class => 'btn btn-dark' %>
 <% end %>
-</div>
-</div>
+        </div>
+    </div>
 </div>

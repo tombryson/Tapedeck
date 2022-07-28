@@ -1,27 +1,20 @@
 <div class="row-view">
     <div class="col-md-8">
 
-<h1><i>Admin:</i>  New Album</h1>
-<br>
+        <h1><i>Admin:</i>  New Album</h1>
+        <br>
+        <%= form_for(@album, :html => {:multipart => true}) do |f| %>
+            <%= f.label "Album Name: " %>
+            <%= f.text_field :title, :class => 'form-control', :required => true %>
 
-  <%= form_for(@album, :html => {:multipart => true}) do |f| %>
-    <%= f.label "Album Name: " %>
-    <%= f.text_field :title, :class => 'form-control', :required => true %>
-
-    <%= f.label :released %>
-    <%= f.date_field :released, :class => 'form-control', :placeholder => 'YYYY-MM-DD' %>
-​    <br>
-    <%= f.label "Album Image: " %>
-    <%= f.cl_image_upload :image, :class => 'form-control' %>
-    <br>
-    <br>​   
-    <%= f.submit "Create Album", :class => 'btn btn-dark' %>
-  <% end %>
-
-
-
-
-
-
+            <%= f.label :released %>
+            <%= f.date_field :released, :class => 'form-control', :placeholder => 'YYYY-MM-DD' %>
+        ​    <br>
+            <%= f.label "Album Image: " %>
+            <%= f.cl_image_upload :image, :class => 'form-control' %>
+            <br>
+            <br>​   
+            <%= f.submit "Create Album", :class => 'btn btn-dark' %>
+        <% end %>
     </div>
 </div>

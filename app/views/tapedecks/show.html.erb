@@ -1,7 +1,11 @@
-<div class="row-view">
- <div class="col-md-10">
-    <h2>Tapedeck:</h2><h1><%= @tapedeck.name.titleize %></h1>
-
+<div class="list">
+    <div class="row-view">
+        <div class="col-md-10">
+            <h2>Tapedeck:</h2><h1><%= @tapedeck.name.titleize %></h1>
+            <p> Tapedeck created by: <span class='username'><%= @tapedeck.user.username.titleize %></span></p>
+        </div>
+    </div>
+</div>
     <% if @current_user.id == @tapedeck.user_id || (@current_user.present? && @current_user.admin?) %>
     <div class="controls">
         <%= link_to 'Edit Name', edit_tapedeck_path(@tapedeck) %>
@@ -12,9 +16,22 @@
         <br>
         <br>
         <br>
-        <%= link_to 'Admin:' '  ' 'Add New Album To Database', new_album_path if @current_user.admin? %>
         <% else %>
+        <br>
         <p> Tapedeck created by: <span class='username'><%= @tapedeck.user.username.titleize %></span></p>
+        <% end %>
+        <% if (@current_user.present? && @current_user.admin?) %>
+            <%= link_to 'ADMIN:' '  ' 'Add New Album To Database', new_album_path if @current_user.admin? %>
+        <% end %>
+    </div>
+    <br>
+    <br>
+    <div class="album-list">
+        <% @tapedeck.albums.each do |album| %>
+            <ul>
+                <%= link_to(album.title, album) %> <%= %>
+                <%= cl_image_tag(album.image, :class => 'thumb') %> <%= %>
+            </ul>
         <% end %>
     </div>
 </div>

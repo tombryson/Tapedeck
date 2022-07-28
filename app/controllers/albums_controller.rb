@@ -17,11 +17,16 @@ class AlbumsController < ApplicationController
     redirect_to albums_path
   end
 
-
   def edit
+      @album = Album.find params[:id]
   end
 
- 
+  def remove_album
+    @tapedeck = Tapedeck.find params[:id]
+    @album = Album.find params[:album_id]
+    @tapedeck.album = nil
+    redirect_to @tapedeck
+  end
 
   def update
     album = Album.find(params[:id])
@@ -34,17 +39,18 @@ class AlbumsController < ApplicationController
     redirect_to(album_path(album))
   end
 
-
   def show
     @album = Album.find params[:id]
   end
 
   def destroy
+    album = Album.find params[:id]
+    album.destroy
+    redirect_to albums_path
   end
 
   private
   def album_params
     params.require(:album).permit(:title, :image, :released, :album)
   end
-
 end

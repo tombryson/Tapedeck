@@ -11,10 +11,10 @@ s4 = Song.create :title => 'Against the Sky'
 puts "#{ Song.count } songs"
 
 Album.destroy_all
-l1 = Album.create :title => 'Hunting High and Low', :released => '1985-06-01'
-l2 = Album.create :title => 'Chopin III', :released => '1993-04-06'
-l3 = Album.create :title => 'More Songs About Food And Revolutionary Art', :released => '1997-03-24'
-l4 = Album.create :title => 'The Pearl', :released => '1984-08-06'
+l1 = Album.create :title => 'Hunting High and Low', :released => '1985-06-01', :image => "https://a-ha.com/uploads/blog-images/hunting-high-and-low-live/AHA_NewsPics_10202018.jpg"
+l2 = Album.create :title => 'Chopin III', :released => '1993-04-06', :image => "https://i.discogs.com/sSP5kLJ2ejkJWhIynFBsnucGnILahOknXP4MkzZwkxo/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU5MTM5/MDAtMTQwNjI2MjI1/Ni0yNTAzLmpwZWc.jpeg"
+l3 = Album.create :title => 'More Songs About Food And Revolutionary Art', :released => '1997-03-24', :image => "https://i.scdn.co/image/ab67616d0000b273fe050bb38624d6b13c41f94a"
+l4 = Album.create :title => 'The Pearl', :released => '1984-08-06', :image => "https://i.scdn.co/image/ab67616d0000b273a00536b039aaefb64040d8dd"
 puts "#{ Album.count } albums"
 
 Artist.destroy_all

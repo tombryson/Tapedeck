@@ -6,9 +6,8 @@
         <br>
             <% @albums.each do |album| %>
                 <ul>
-                <%= link_to(album.title, album) %>
+                    <%= link_to "Add #{ album.title }", tapedeck_add_album_path(id: @tapedeck.id, album_id: album.id), method: :post %>
                 </ul>
             <% end %>
     </div>
 </div>
-

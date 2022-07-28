@@ -49,6 +49,14 @@ header {
 
 .controls {
     padding: 6px;
+    display: inline-block;
+    border: solid #0e0f11 3px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+    background-color: #333a40;
+    box-shadow: 3px 2px 7px 1px black;
+    margin-bottom: 40px;
 }
 
 #dark-button a {
@@ -169,6 +177,25 @@ aside a {
     padding: 40px;
 }
 
+.thumb {
+    max-width: 150px;
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.album-list a {
+    margin-left: 80px;
+}
+
+.album-list {
+    padding-bottom: 60px;
+    padding-top: 80px;
+}
+
+.list {
+    display: inline-block;
+    width: 55%;
+}
 
 .home-nav {
     max-height: 5.600000000000001em;

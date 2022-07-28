@@ -19,8 +19,11 @@ class TapedecksController < ApplicationController
   end
 
   def add_album
+    @tapedeck = Tapedeck.find params[:id]
+    @album = Album.find params[:album_id]
+    @tapedeck.albums << @album
+    redirect_to @tapedeck
   end
-  
 
   def edit
     @tapedeck = Tapedeck.find params[:id]
