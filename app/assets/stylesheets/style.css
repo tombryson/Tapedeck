@@ -118,7 +118,7 @@ h5 {
 .navbar {
     margin-top: 0px;
     align-items: baseline;
-    box-shadow: 0px 4px 4px 0px black;
+    box-shadow: 0px, 4px, 4px, 0px, black;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -159,7 +159,7 @@ aside {
     padding: 30px;
     width: 100%;
     border-radius: 28px;
-    box-shadow: 6px 9px 6px 0px #0e0f11;
+    box-shadow: 6px, 9px, 6px, 0px, #0e0f11;
 }
 
 aside a {
@@ -214,7 +214,7 @@ aside a {
     transition-property: inherit;
     transition-duration: 0.14s;
     transition-timing-function: cubic-bezier(0.19, 0.57, 0.55, 0.41);
-    background: radial-gradient(rgb(51 58 64) 68%, transparent 102%);
+    background: radial-gradient(rgb(51, 58, 64) 68%, transparent 102%);
 }
 
 .image-container:hover {
