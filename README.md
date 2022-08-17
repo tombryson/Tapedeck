@@ -1,7 +1,7 @@
 # Tapedeck
 > Is an online space created to provide a community of music listeners the ability to create and share albums that hold particular significant together.
 
-> Join the community [_HERE_](http://git.heroku.com/damp-sea-58851.git). <<<<<<<<<<<<<<<<<<<<<
+> Join the community [_HERE_](http://damp-sea-58851.herokuapp.com/). <<<<<<<<<<<<<<<<<<<<<
 
 ## Table of Contents
 * [General Info](#general-information)
