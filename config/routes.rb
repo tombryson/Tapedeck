@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :users, :only => [:new, :create, :index]
   resources :tapedecks
   resources :albums
+  resources :artists
   resources :songs
-
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
@@ -18,6 +18,4 @@ Rails.application.routes.draw do
   get '/albums/:id/' => 'albums#new'
   get '/albums/:id/edit' => 'albums#edit'
   post '/album/:id/remove_album' => 'albums#remove_album', as: :album_remove_album
-
-
 end

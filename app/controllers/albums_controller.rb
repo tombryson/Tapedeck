@@ -41,6 +41,8 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find params[:id]
+    @artists = Artist.all
+    @songs = Song.all
   end
 
   def destroy

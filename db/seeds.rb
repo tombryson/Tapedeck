@@ -8,6 +8,7 @@ s1 = Song.create :title => 'Take On Me'
 s2 = Song.create :title => 'Ballade Nr. 1 G-Moll, Op. 23'
 s3 = Song.create :title => "At Les"
 s4 = Song.create :title => 'Against the Sky'
+s5 = Song.create :title => 'Late October'
 puts "#{ Song.count } songs"
 
 Album.destroy_all
@@ -44,6 +45,7 @@ l1.songs << s1
 l2.songs << s2
 l3.songs << s3
 l4.songs << s4
+l4.songs << s5
 
 puts "Artists and albums"
 a1.albums << l1
