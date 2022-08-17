@@ -1,14 +1,14 @@
 # Tapedeck
 > Is an online space created to provide a community of music listeners the ability to create and share albums that hold particular significant together.
 
-> Play the game [_HERE_](https://tombryson.github.io/project1/). <<<<<<<<<<<<<<<<<<<<<
+> Join the community [_HERE_](https://tombryson.github.io/project1/). <<<<<<<<<<<<<<<<<<<<<
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
-* [Setup & Gameplay](#setup--gameplay)
+* [Site Navigation](#site--navigation)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
@@ -36,7 +36,7 @@
 ## Screenshots
 
 
-## Setup & Gameplay
+## Site Navigation
 
 - Requires Any Modern Browser
 
