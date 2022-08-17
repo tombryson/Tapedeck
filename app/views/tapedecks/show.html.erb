@@ -13,9 +13,6 @@
         <%= link_to 'Delete Deck', @tapedeck, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
         |
         <%= link_to 'Add Album to Deck', tapedeck_add_album_page_path(@tapedeck) %>
-                <% if (@current_user.present? && @current_user.admin?) %>
-            <%= link_to 'ADMIN:' '  ' 'Add New Album To Database', new_album_path if @current_user.admin? %>
-        <% end %>
         </div>
         <br>
         <br>
@@ -26,7 +23,7 @@
             <% @tapedeck.albums.each do |album| %>
                 <ul class="album-names">
                     <%= link_to(album.title, album) %> <%= %>
-                    <%= cl_image_tag(album.image, :class => 'thumb') %> <%= %>
+                    <%= cl_image_tag(album.image, :class => 'thumb') %>
                 </ul>
             <% end %>
         </div>
