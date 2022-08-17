@@ -34,7 +34,7 @@
 
 
 ## Screenshots
-(Screen%Shot%2022-08-17%at%12.24.54.png)
+![Example screenshot](Screen%20Shot%202022-08-17%20at%2012.24.54.png)
 
 ## Site Navigation
 
