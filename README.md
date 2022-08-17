@@ -25,6 +25,7 @@
 - HTML - version 5.0
 - CSS - version 3.0
 - Ruby on rails - version 5.2.8.1
+- Cloudinary
 
 
 ## Features
@@ -62,7 +63,7 @@ Room for improvement:
 
 
 ## Acknowledgements
-- Acknowledgement to Joel Turnbull, Loden Gendum for in-class support.
+- Acknowledgement to Joel Turnbull, Loden Gendun for in-class support.
 - George Haviaridis for much needed CSS layout support.
 - Dylan Ang for Rails support.
 
