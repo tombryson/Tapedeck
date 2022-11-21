@@ -13,11 +13,12 @@ body {
 }
 
 .container {
-    background: #00ff02;
+    background: #05f805;;
     min-height: 960px;
     padding-right: 0px;
     padding-left: 0px;
     padding-top: 100.66px;
+    border-radius: 16px;
 }
 
 .album-img {
