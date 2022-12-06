@@ -106,6 +106,22 @@ h1 {
     padding-bottom: 30px;
 }
 
+.header {
+    font-size: 50px;
+    color: #0e0f11;
+    padding-bottom: 30px;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    font-weight: 800;
+    background-image: repeating-linear-gradient(45deg, #09f803, #ffffff2e 2px);
+    background-size: 100px;
+    border: 2px solid;
+    margin: 0 auto;
+    font-family: monospace;
+    font-style: italic;
+}
+
 h5 {
     font-size: 1.44rem;
 }
