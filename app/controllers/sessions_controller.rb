@@ -1,10 +1,11 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
+  layout 'sessions'
   def index
     @users = User.all
   end
   
   def new
-
+    render 'new'
   end
 
   def create

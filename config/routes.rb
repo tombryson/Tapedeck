@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   resources :albums
   resources :artists
   resources :songs
-  get '/login' => 'session#new'
-  post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
+  resources :sessions, only: [:create, :destroy]
+  get '/login' => 'users#new'
+  post '/login' => 'sessions#create'
+  delete '/login' => 'sessions#destroy'
   get '/profile' => 'pages#profile'
   get '/tapedeck' => 'tapedecks#index'
   get '/tapedeck/:id/add_album_page' => 'tapedecks#add_album_page', as: :tapedeck_add_album_page
