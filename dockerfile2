@@ -1,0 +1,39 @@
+FROM ruby:2.6.1
+
+
+# Install gawk bison
+RUN apt-get update && \
+    apt-get install -y wget build-essential gawk bison texinfo
+
+# Download and extract glibc source code
+RUN wget --no-check-certificate --verbose https://ftp.gnu.org/gnu/glibc/glibc-2.34.tar.gz && \
+    tar -xvzf glibc-2.34.tar.gz && \
+    cd glibc-2.34 && \
+    mkdir -p build && \
+    cd build && \
+    ../configure --prefix=/usr --disable-sotruss-lib && \
+    make --keep-going && \
+    sudo make install
+    
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the Gemfile and Gemfile.lock into the container
+COPY Gemfile Gemfile.lock ./
+
+# Install the necessary gems
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
+RUN bundle config set without 'development test'
+RUN bundle install
+
+# Copy the rest of the application code into the container
+COPY . .
+
+# Expose port 3000
+EXPOSE 3000
+
+# Start the Rails server
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+

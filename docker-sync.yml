@@ -1,0 +1,5 @@
+version: '2'
+syncs:
+  app-code-sync:
+    src: './'
+    sync_strategy: 'native_osx'
